@@ -4,7 +4,7 @@ import requests
 
 def main():
     website = input("Enter website: ")
-    wordlist = input("Enter Wordlist: ")
+    wordlist = open(input("Enter Wordlist: "), 'r')
 
 
     good_code = ['200', '201', '202']
@@ -12,9 +12,9 @@ def main():
 
     for words in wordlist:
         resp = requests.get(website + words)
-        if resp.status_code == 200:
+        if resp.status_code in good_code:
             print(website + words)
-        elif resp.status_code == 404:
+        elif resp.status_code in bad_code:
             print("Not working" + website + words)
         else:
             print("I have no clue")
