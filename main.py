@@ -4,7 +4,12 @@ import requests
 
 def main():
     website = input("Enter website: ")
-    wordlist = ['admin', 'snot', 'backup', 'docs', 'include', 'styles']
+    wordlist = input("Enter Wordlist: ")
+
+
+    good_code = ['200', '201', '202']
+    bad_code = ['400', '401', '403', '404']
+
     for words in wordlist:
         resp = requests.get(website + words)
         if resp.status_code == 200:
