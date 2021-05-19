@@ -1,2 +1,25 @@
 # HiddenDir
-HiddenDir is a tool used for directory brute forcing. inspiration comes from dirb scanner.
+HiddenDir is a tool used for scanning a websites hidden or active web directories, using brute-froce attack method.
+This is done by analyzing the HTTP status return codes. Inspiration comes from dirb scanner.
+
+
+### Installation
+1. First clone the repo
+```
+git clone https://github.com/KenjiDoom/HiddenDir.git
+```
+2. Install python packages
+```
+pip install -r requirements.txt
+```
+
+### Usage
+```
+python main.py --help
+```
+
+### TO-DO
+- [] Custom Headers
+- [] Proxies
+- [] Args user input
+- [] saving output to file
