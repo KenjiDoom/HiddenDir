@@ -19,7 +19,7 @@ python main.py --help
 ```
 
 ### TO-DO
-- [] Custom Headers
-- [] Proxies
 - [] Args user input
+- [] Proxies
+- [] Custom Headers
 - [] saving output to file
