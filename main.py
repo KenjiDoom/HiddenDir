@@ -3,22 +3,15 @@
 import requests
 
 def main():
-    website = input("Enter website: ")
-    wordlist = open(input("Enter Wordlist: "), 'r')
-
-
-    good_code = ['200', '201', '202']
-    bad_code = ['400', '401', '403', '404']
+    website = "http://192.168.1.137/"
+    wordlist = open('common.txt', 'r')
 
     for words in wordlist:
-        resp = requests.get(website + words)
-        if resp.status_code in good_code:
-            print(website + words)
-        elif resp.status_code in bad_code:
-            print("Not working" + website + words)
-        else:
-            print("I have no clue")
-
+        resp = requests.get(website + words.strip())
+        if resp.status_code == requests.codes.ok:
+            print("Succ " + website + words)
+        elif resp.status_code == 404:
+            pass
+            #print("Not working " + website + words)
 
 main()
-
