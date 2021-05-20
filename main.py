@@ -13,15 +13,19 @@ def usr_input(args=None):
 
 
 def main(args=usr_input()):
-    website = args.url
-    wordlist = open(str(args.wordlist), 'r')
+    try:
+        website = args.url
+        wordlist = open(str(args.wordlist), 'r')
+    except FileNotFoundError:
+        print("No wordlist was specified using defualt wordlist.")
+        wordlist = open('common.txt', 'r')
 
     for words in wordlist:
-        resp = requests.get(website + words.strip())
+        resp = requests.get(str(website) + str(words.strip()))
         if resp.status_code == requests.codes.ok:
-            print("Succ " + website + words)
+            print("Successful: " + website + words)
         elif resp.status_code == 404:
             pass
-                #website = "http://192.168.1.137/"
-                #wordlist = open('common.txt', 'r')
+
+
 main()
