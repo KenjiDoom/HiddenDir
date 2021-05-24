@@ -19,7 +19,7 @@ python main.py --help
 ```
 
 ### TO-DO
-- [x] Args user input
-- [] Proxies
-- [] Custom Headers
-- [] saving output to file
+- [x] - Args user input
+- [x] - Tor Proxies
+- [x] - Random User-Agents
+- [] - saving output to file
