@@ -21,7 +21,22 @@ pip install -r requirements.txt
 
 ### Usage Examples
 ```
-python HideDir.py --help
+$ python HideDir.py --help
+usage: HideDir.py [-h] [-u URL] [-w WORDLIST] [-p PROXY] [-a AGENT]
+
+HiddenDir is a tool used for scanning a websites hidden or active web directories, using brute-froce attack method. This is done by analyzing the
+HTTP status return codes
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u URL, --url URL     Target Webiste To Be Attacked.
+  -w WORDLIST, --wordlist WORDLIST
+                        Wordlist File, Must Be A .Txt File.
+  -p PROXY, --proxy PROXY
+                        Enable Tor Proxies
+  -a AGENT, --agent AGENT
+                        Enable Random User Agent Strings
+
 ```
 1. Scan TARGET with custom wordlist
 ```
