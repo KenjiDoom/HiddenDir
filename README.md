@@ -17,6 +17,7 @@ sudo pacman -S tor
 ```
 pip install -r requirements.txt
 ```
+4. [Setup Tor](https://github.com/KenjiDoom/StealthProbes#4th-step-is-to-copy-the-hash-into-the-torrc-file)
 
 
 ### Usage Examples
