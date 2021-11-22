@@ -41,19 +41,19 @@ optional arguments:
 ```
 1. Scan TARGET with custom wordlist
 ```
-python -u http://scanexample.com/ -w common.txt
+python HideDir.py -u http://scanexample.com/ -w common.txt
 ```
 2. Scan TARGET with Random User-Agents Enabled
 ```
-python -u http://scanexample.com/ -w common.txt -a on
+python  HideDir.py -u http://scanexample.com/ -w common.txt -a on
 ```
 3. Scan TARGET with Tor Proxies Enabled
 ```
-python -u http://scanexample.com/ -w common.txt -p on
+python HideDir.py -u http://scanexample.com/ -w common.txt -p on
 ```
 4. Scan TARGET with Random UserAgent & Tor Peoxies Enabled
 ```
-python -u http://scanexample.com/ -w common.txt -p on -a on
+python HideDir.py -u http://scanexample.com/ -w common.txt -p on -a on
 ```
 
 ### TO-DO
